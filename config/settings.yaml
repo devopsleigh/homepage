@@ -8,3 +8,19 @@ providers:
 
 #headerStyle: clean
 showStats: true
+
+layout:
+  Services:
+    tab: User Services
+  Network:
+     tab: Technical Services
+  Hosting:
+     tab: Technical Services
+  Security:
+     tab: Technical Services
+  Development:
+     tab: Technical Services
+  Home Automation:
+     tab: Technical Services
+  Developer:
+     tab: Technical Services
