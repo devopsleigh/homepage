@@ -14,7 +14,7 @@
           password: {{HOMEPAGE_VAR_UNIFI_PASS}}
     - Pi-hole 01:
         href: http://pihole-01.{{HOMEPAGE_VAR_DOMAIN}}:2052/admin
-        description: Network-wide ad blocker
+        description: Network-wide ad blocker and local DNS
         icon: pi-hole
         siteMonitor: http://pihole-01.{{HOMEPAGE_VAR_DOMAIN}}:2052/admin
         widget:
@@ -23,7 +23,7 @@
           key: {{HOMEPAGE_VAR_PIHOLE_KEY}}
     - Pi-hole 02:
         href: http://pihole-02.{{HOMEPAGE_VAR_DOMAIN}}/admin
-        description: Network-wide ad blocker
+        description: Network-wide ad blocker and local DNS
         icon: pi-hole
         siteMonitor: http://pihole-02.{{HOMEPAGE_VAR_DOMAIN}}/admin
         widget:
