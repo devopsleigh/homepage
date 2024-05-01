@@ -102,6 +102,11 @@
         description: Version control and CI/CD platform
         icon: gitlab
         ping: https://gitlab.{{HOMEPAGE_VAR_DOMAIN}}
+    - SonarQube:
+        href: https://sonarqube.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Version control and CI/CD platform
+        icon: si-sonarqube
+        ping: https://sonarqube.{{HOMEPAGE_VAR_DOMAIN}}
 
 - Services:
     - Paperless:
