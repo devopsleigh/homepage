@@ -57,7 +57,7 @@
 
 - Security:
     - Keycloak:
-        href: http://idp.{{HOMEPAGE_VAR_DOMAIN}}
+        href: https://keycloak.{{HOMEPAGE_VAR_DOMAIN}}
         description: Single sign-on authentication server
         icon: keycloak
     - Wazuh:
