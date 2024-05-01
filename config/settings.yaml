@@ -11,6 +11,7 @@ quicklaunch:
   hideInternetSearch: true
 
 showStats: true
+statusStyle: "dot"
 
 layout:
   Services:
