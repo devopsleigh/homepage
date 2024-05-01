@@ -104,7 +104,7 @@
         ping: https://gitlab.{{HOMEPAGE_VAR_DOMAIN}}
     - SonarQube:
         href: https://sonarqube.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Version control and CI/CD platform
+        description: Static code analysis and quality scanning
         icon: si-sonarqube
         ping: https://sonarqube.{{HOMEPAGE_VAR_DOMAIN}}
 
