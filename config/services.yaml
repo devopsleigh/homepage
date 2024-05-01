@@ -45,6 +45,7 @@
         href: https://nas.{{HOMEPAGE_VAR_DOMAIN}}:5001
         description: Network-attached storage system
         icon: synology-dsm
+        siteMonitor: https://nas.{{HOMEPAGE_VAR_DOMAIN}}:5001
 #        widget:
 #          type: diskstation
 #          url: https://nas.{{HOMEPAGE_VAR_DOMAIN}}:5001
@@ -54,30 +55,36 @@
         href: https://proxy.{{HOMEPAGE_VAR_DOMAIN}}
         description: TLS front end and reverse proxy
         icon: nginx-proxy-manager
+        siteMonitor: https://proxy.{{HOMEPAGE_VAR_DOMAIN}}
 
 - Security:
     - Keycloak:
         href: https://keycloak.{{HOMEPAGE_VAR_DOMAIN}}
         description: Single sign-on authentication server
         icon: keycloak
+        siteMonitor: https://keycloak.{{HOMEPAGE_VAR_DOMAIN}}
     - Wazuh:
         href: https://wazuh.{{HOMEPAGE_VAR_DOMAIN}}
         description: Security monitoring and intrusion detection
         icon: https://avatars.githubusercontent.com/u/13752566
+        siteMonitor: https://wazuh.{{HOMEPAGE_VAR_DOMAIN}}
     - The Hive:
         href: https://hive.{{HOMEPAGE_VAR_DOMAIN}}
         description: Incident response and case management
         icon: https://www.strangebee.com/images/logos/bee-white.svg
+        siteMonitor: https://hive.{{HOMEPAGE_VAR_DOMAIN}}
     - Pi-Alert:
         href: http://pialert.{{HOMEPAGE_VAR_DOMAIN}}
         description: Network monitoring tool for detecting rogue devices
         icon: mdi-server-security
+        siteMonitor: http://pialert.{{HOMEPAGE_VAR_DOMAIN}}
 
 - Home Automation:
     - Home Assistant:
         href: http://ha.{{HOMEPAGE_VAR_DOMAIN}}
         description: Home automation platform
         icon: home-assistant
+        siteMonitor: http://ha.{{HOMEPAGE_VAR_DOMAIN}}
 #        widget:
 #          type: homeassistant
 #          url: http://homeassistant.host.or.ip:port
@@ -86,31 +93,38 @@
         href: https://nodered.{{HOMEPAGE_VAR_DOMAIN}}
         description: Flow-based development tool for IoT applications
         icon: node-red
+        siteMonitor: https://nodered.{{HOMEPAGE_VAR_DOMAIN}}
 
 - Development:
     - GitLab:
-        href: https://gitlab.com
+        href: https://gitlab.{{HOMEPAGE_VAR_DOMAIN}}
         description: Version control and CI/CD platform
         icon: gitlab
+        siteMonitor: https://gitlab.{{HOMEPAGE_VAR_DOMAIN}}
 
 - Services:
     - Paperless:
         href: http://docs.{{HOMEPAGE_VAR_DOMAIN}}
         description: Document management system
         icon: paperless-ngx
+        siteMonitor: http://docs.{{HOMEPAGE_VAR_DOMAIN}}
     - Mealie:
         href: http://mealie.{{HOMEPAGE_VAR_DOMAIN}}
         description: Recipe management and meal planning
         icon: mealie
+        siteMonitor: http://mealie.{{HOMEPAGE_VAR_DOMAIN}}
     - Plex:
         href: https://plex.{{HOMEPAGE_VAR_DOMAIN}}:32400/web
         description: Home media streaming service
         icon: plex
+        siteMonitor: https://plex.{{HOMEPAGE_VAR_DOMAIN}}
     - Makemkv:
         href: https://makemkv.{{HOMEPAGE_VAR_DOMAIN}}
         description: DVD and Blu-Ray backup and conversion
         icon: makemkv.png
+        siteMonitor: https://makemkv.{{HOMEPAGE_VAR_DOMAIN}}
     - Kiwix:
         href: http://kiwix.{{HOMEPAGE_VAR_DOMAIN}}
         description: Offline Wiki reader
         icon: kiwix
+        siteMonitor: http://kiwix.{{HOMEPAGE_VAR_DOMAIN}}
