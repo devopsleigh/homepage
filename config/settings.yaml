@@ -6,7 +6,10 @@ providers:
   openweathermap: openweathermapapikey
   weatherapi: weatherapiapikey
 
-#headerStyle: clean
+quicklaunch:
+  searchDescriptions: true
+  hideInternetSearch: true
+
 showStats: true
 
 layout:
