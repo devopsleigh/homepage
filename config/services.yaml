@@ -36,6 +36,7 @@
         href: https://pve-01.{{HOMEPAGE_VAR_DOMAIN}}:8006
         description: Hypervisor
         icon: proxmox
+        ping: https://pve-01.{{HOMEPAGE_VAR_DOMAIN}}:8006
 #        widget:
 #          type: proxmox
 #          url: https://pve-01.{{HOMEPAGE_VAR_DOMAIN}}:8006
@@ -114,15 +115,15 @@
         icon: mealie
         ping: http://mealie.{{HOMEPAGE_VAR_DOMAIN}}
     - Plex:
-        href: https://plex.{{HOMEPAGE_VAR_DOMAIN}}:32400/web
+        href: http://plex.{{HOMEPAGE_VAR_DOMAIN}}:32400/web
         description: Home media streaming service
         icon: plex
-        ping: https://plex.{{HOMEPAGE_VAR_DOMAIN}}
+        ping: http://plex.{{HOMEPAGE_VAR_DOMAIN}}
     - Makemkv:
-        href: https://makemkv.{{HOMEPAGE_VAR_DOMAIN}}
+        href: http://makemkv.{{HOMEPAGE_VAR_DOMAIN}}
         description: DVD and Blu-Ray backup and conversion
         icon: makemkv.png
-        ping: https://makemkv.{{HOMEPAGE_VAR_DOMAIN}}
+        ping: http://makemkv.{{HOMEPAGE_VAR_DOMAIN}}
     - Kiwix:
         href: http://kiwix.{{HOMEPAGE_VAR_DOMAIN}}
         description: Offline Wiki reader
