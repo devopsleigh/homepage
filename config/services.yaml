@@ -59,11 +59,6 @@
 #          url: https://nas.{{HOMEPAGE_VAR_DOMAIN}}:5001
 #          username: username
 #          password: password
-    - Kasm:
-        href: http://kasm.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Desktop as a Service
-        icon: kasm
-        ping: http://kasm.{{HOMEPAGE_VAR_DOMAIN}}
     - Traefik:
         href: https://proxy.{{HOMEPAGE_VAR_DOMAIN}}
         description: TLS front end and reverse proxy
@@ -74,6 +69,11 @@
         description: Service monitoring
         icon: uptime-kuma
         ping: https://uptimekuma.{{HOMEPAGE_VAR_DOMAIN}}
+    - Kasm:
+        href: http://kasm.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Desktop as a Service
+        icon: kasm
+        ping: http://kasm.{{HOMEPAGE_VAR_DOMAIN}}
 
 - Security:
     - Keycloak:
