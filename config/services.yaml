@@ -59,11 +59,11 @@
 #          url: https://nas.{{HOMEPAGE_VAR_DOMAIN}}:5001
 #          username: username
 #          password: password
-    - Kiwix:
-        href: http://kiwix.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Offline Wiki reader
-        icon: kiwix
-        ping: http://kiwix.{{HOMEPAGE_VAR_DOMAIN}}
+    - Kasm:
+        href: http://kasm.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Desktop as a Service
+        icon: kasm
+        ping: http://kasm.{{HOMEPAGE_VAR_DOMAIN}}
     - Traefik:
         href: https://proxy.{{HOMEPAGE_VAR_DOMAIN}}
         description: TLS front end and reverse proxy
