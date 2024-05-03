@@ -100,10 +100,10 @@
 
 - Home Automation:
     - Home Assistant:
-        href: http://ha.{{HOMEPAGE_VAR_DOMAIN}}
+        href: http://ha.{{HOMEPAGE_VAR_DOMAIN}}:8123
         description: Home automation platform
         icon: home-assistant
-        ping: http://ha.{{HOMEPAGE_VAR_DOMAIN}}
+        ping: http://ha.{{HOMEPAGE_VAR_DOMAIN}}:8123
 #        widget:
 #          type: homeassistant
 #          url: http://homeassistant.host.or.ip:port
@@ -163,10 +163,10 @@
         ping: http://metabase.{{HOMEPAGE_VAR_DOMAIN}}
 - Home:
     - Home Assistant:
-        href: http://ha.{{HOMEPAGE_VAR_DOMAIN}}
+        href: http://ha.{{HOMEPAGE_VAR_DOMAIN}}:8123
         description: Home automation platform
         icon: home-assistant
-        ping: http://ha.{{HOMEPAGE_VAR_DOMAIN}}
+        ping: http://ha.{{HOMEPAGE_VAR_DOMAIN}}:8123
     - CCTV:
         href: http://nvr.{{HOMEPAGE_VAR_DOMAIN}}
         description: Security cameras
