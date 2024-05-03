@@ -30,6 +30,11 @@
           type: pihole
           url: http://pihole-02.{{HOMEPAGE_VAR_DOMAIN}}
           key: {{HOMEPAGE_VAR_PIHOLE_KEY}}
+    - NetAlertX:
+        href: http://netalertx.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Network monitoring tool for detecting rogue devices
+        icon: pi-alert.png
+        ping: http://netalertx.{{HOMEPAGE_VAR_DOMAIN}}
 
 - Hosting:
     - Proxmox:
@@ -52,11 +57,16 @@
 #          url: https://nas.{{HOMEPAGE_VAR_DOMAIN}}:5001
 #          username: username
 #          password: password
-    - Nginx Proxy Manager:
+    - Traefik:
         href: https://proxy.{{HOMEPAGE_VAR_DOMAIN}}
         description: TLS front end and reverse proxy
-        icon: nginx-proxy-manager
+        icon: traefik
         ping: https://proxy.{{HOMEPAGE_VAR_DOMAIN}}
+    - Uptime Kuma:
+        href: https://uptimekuma.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Service monitoring
+        icon: uptime-kuma
+        ping: https://uptimekuma.{{HOMEPAGE_VAR_DOMAIN}}
 
 - Security:
     - Keycloak:
@@ -74,11 +84,12 @@
         description: Incident response and case management
         icon: https://www.strangebee.com/images/logos/bee-white.svg
         ping: https://hive.{{HOMEPAGE_VAR_DOMAIN}}
-    - Pi-Alert:
-        href: http://pialert.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Network monitoring tool for detecting rogue devices
-        icon: mdi-server-security
-        ping: http://pialert.{{HOMEPAGE_VAR_DOMAIN}}
+    - Caldera:
+        href: https://caldera.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Adversary emulation
+        icon: caldera.png
+        ping: https://caldera.{{HOMEPAGE_VAR_DOMAIN}}
+    
 
 - Home Automation:
     - Home Assistant:
@@ -103,10 +114,10 @@
         icon: gitlab
         ping: https://gitlab.{{HOMEPAGE_VAR_DOMAIN}}
     - SonarQube:
-        href: https://sonarqube.{{HOMEPAGE_VAR_DOMAIN}}
+        href: http://sonarqube.{{HOMEPAGE_VAR_DOMAIN}}:9000
         description: Static code analysis and quality scanning
         icon: si-sonarqube
-        ping: https://sonarqube.{{HOMEPAGE_VAR_DOMAIN}}
+        ping: http://sonarqube.{{HOMEPAGE_VAR_DOMAIN}}:9000
 
 - Services:
     - Paperless:
@@ -134,3 +145,13 @@
         description: Offline Wiki reader
         icon: kiwix
         ping: http://kiwix.{{HOMEPAGE_VAR_DOMAIN}}
+    - Kasm:
+        href: http://kasm.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Desktop as a Service
+        icon: kasm
+        ping: http://kasm.{{HOMEPAGE_VAR_DOMAIN}}
+    - Metabase:
+        href: http://metabase.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Business analytics dashboards
+        icon: kasm
+        ping: http://metabase.{{HOMEPAGE_VAR_DOMAIN}}
