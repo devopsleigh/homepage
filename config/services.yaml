@@ -5,7 +5,7 @@
 - Network:
     - UniFi Controller:
         href: https://192.168.1.1
-        description: Network management software for Ubiquiti devices
+        description: Network management
         icon: unifi
         widget:
           type: unifi
