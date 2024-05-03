@@ -149,7 +149,7 @@
         href: http://plex.{{HOMEPAGE_VAR_DOMAIN}}:32400/web
         description: Home media streaming service
         icon: plex
-        ping: http://plex.{{HOMEPAGE_VAR_DOMAIN}}
+        ping: http://plex.{{HOMEPAGE_VAR_DOMAIN}}:32400
     - Makemkv:
         href: http://makemkv.{{HOMEPAGE_VAR_DOMAIN}}
         description: DVD and Blu-Ray backup and conversion
