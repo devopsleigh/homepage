@@ -2,10 +2,12 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/latest/configs/services
 
+# Technical Services
+
 - Network:
     - UniFi Controller:
         href: https://192.168.1.1
-        description: Network management
+        description: UniFi network management
         icon: unifi
         widget:
           type: unifi
@@ -49,7 +51,7 @@
 #          password: api_token_secret
     - Synology NAS:
         href: https://nas.{{HOMEPAGE_VAR_DOMAIN}}:5001
-        description: Network-attached storage system
+        description: Network-attached storage
         icon: synology-dsm
         ping: https://nas.{{HOMEPAGE_VAR_DOMAIN}}:5001
 #        widget:
@@ -57,6 +59,11 @@
 #          url: https://nas.{{HOMEPAGE_VAR_DOMAIN}}:5001
 #          username: username
 #          password: password
+    - Kiwix:
+        href: http://kiwix.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Offline Wiki reader
+        icon: kiwix
+        ping: http://kiwix.{{HOMEPAGE_VAR_DOMAIN}}
     - Traefik:
         href: https://proxy.{{HOMEPAGE_VAR_DOMAIN}}
         description: TLS front end and reverse proxy
@@ -71,7 +78,7 @@
 - Security:
     - Keycloak:
         href: https://keycloak.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Single sign-on authentication server
+        description: Single sign-on authentication
         icon: keycloak
         ping: https://keycloak.{{HOMEPAGE_VAR_DOMAIN}}
     - Wazuh:
@@ -103,14 +110,14 @@
 #          key: access_token
     - NodeRed:
         href: https://nodered.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Flow-based development tool for IoT applications
+        description: Flow-based automations
         icon: node-red
         ping: https://nodered.{{HOMEPAGE_VAR_DOMAIN}}
 
 - Development:
     - GitLab:
         href: https://gitlab.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Version control and CI/CD platform
+        description: Version control and CI/CD
         icon: gitlab
         ping: https://gitlab.{{HOMEPAGE_VAR_DOMAIN}}
     - SonarQube:
@@ -119,10 +126,12 @@
         icon: si-sonarqube
         ping: http://sonarqube.{{HOMEPAGE_VAR_DOMAIN}}:9000
 
-- Services:
+# User Services
+
+- Utilities:
     - Paperless:
         href: http://docs.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Document management system
+        description: Document management
         icon: paperless-ngx
         ping: http://docs.{{HOMEPAGE_VAR_DOMAIN}}
     - Mealie:
@@ -130,6 +139,12 @@
         description: Recipe management and meal planning
         icon: mealie
         ping: http://mealie.{{HOMEPAGE_VAR_DOMAIN}}
+    - Kiwix:
+        href: http://kiwix.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Offline Wiki reader
+        icon: kiwix
+        ping: http://kiwix.{{HOMEPAGE_VAR_DOMAIN}}
+- Entertainment:
     - Plex:
         href: http://plex.{{HOMEPAGE_VAR_DOMAIN}}:32400/web
         description: Home media streaming service
@@ -140,18 +155,20 @@
         description: DVD and Blu-Ray backup and conversion
         icon: makemkv.png
         ping: http://makemkv.{{HOMEPAGE_VAR_DOMAIN}}
-    - Kiwix:
-        href: http://kiwix.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Offline Wiki reader
-        icon: kiwix
-        ping: http://kiwix.{{HOMEPAGE_VAR_DOMAIN}}
-    - Kasm:
-        href: http://kasm.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Desktop as a Service
-        icon: kasm
-        ping: http://kasm.{{HOMEPAGE_VAR_DOMAIN}}
+- Business:
     - Metabase:
         href: http://metabase.{{HOMEPAGE_VAR_DOMAIN}}
         description: Business analytics dashboards
-        icon: kasm
+        icon: metabase
         ping: http://metabase.{{HOMEPAGE_VAR_DOMAIN}}
+- Home:
+    - Home Assistant:
+        href: http://ha.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Home automation platform
+        icon: home-assistant
+        ping: http://ha.{{HOMEPAGE_VAR_DOMAIN}}
+    - CCTV:
+        href: http://nvr.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Security cameras
+        icon: mdi-cctv
+        ping: http://nvr.{{HOMEPAGE_VAR_DOMAIN}}

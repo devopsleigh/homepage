@@ -14,8 +14,16 @@ showStats: true
 statusStyle: "dot"
 
 layout:
-  Services:
+# User Services
+  Home:
     tab: User Services
+  Business:
+    tab: User Services
+  Entertainment:
+    tab: User Services
+  Utilities:
+    tab: User Services
+# Technical Services
   Network:
      tab: Technical Services
   Hosting:
