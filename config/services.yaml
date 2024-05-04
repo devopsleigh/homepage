@@ -82,10 +82,10 @@
         icon: keycloak
         ping: https://keycloak.{{HOMEPAGE_VAR_DOMAIN}}
     - Wazuh:
-        href: https://wazuh.{{HOMEPAGE_VAR_DOMAIN}}:5601
+        href: http://wazuh.{{HOMEPAGE_VAR_DOMAIN}}:5601
         description: Security monitoring and intrusion detection
         icon: https://avatars.githubusercontent.com/u/13752566
-        ping: https://wazuh.{{HOMEPAGE_VAR_DOMAIN}}:5601
+        ping: http://wazuh.{{HOMEPAGE_VAR_DOMAIN}}:5601
     - The Hive:
         href: https://hive.{{HOMEPAGE_VAR_DOMAIN}}
         description: Incident response and case management
