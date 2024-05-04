@@ -12,6 +12,8 @@ quicklaunch:
 
 showStats: true
 statusStyle: "dot"
+theme: dark
+color: slate
 
 layout:
 # User Services
