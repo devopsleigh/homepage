@@ -60,10 +60,10 @@
 #          username: username
 #          password: password
     - Traefik:
-        href: https://proxy.{{HOMEPAGE_VAR_DOMAIN}}
+        href: https://traefik.{{HOMEPAGE_VAR_DOMAIN}}
         description: TLS front end and reverse proxy
         icon: traefik
-        ping: https://proxy.{{HOMEPAGE_VAR_DOMAIN}}
+        ping: https://traefik.{{HOMEPAGE_VAR_DOMAIN}}
     - Uptime Kuma:
         href: https://uptimekuma.{{HOMEPAGE_VAR_DOMAIN}}
         description: Service monitoring
@@ -99,10 +99,10 @@
 
 - Home Automation:
     - Home Assistant:
-        href: http://ha.{{HOMEPAGE_VAR_DOMAIN}}:8123
+        href: https://homeassistant.{{HOMEPAGE_VAR_DOMAIN}}
         description: Home automation platform
         icon: home-assistant
-        ping: http://ha.{{HOMEPAGE_VAR_DOMAIN}}:8123
+        ping: https://homeassistant.{{HOMEPAGE_VAR_DOMAIN}}
 #        widget:
 #          type: homeassistant
 #          url: http://homeassistant.host.or.ip:port
@@ -162,10 +162,10 @@
         ping: http://metabase.{{HOMEPAGE_VAR_DOMAIN}}
 - Home:
     - Home Assistant:
-        href: http://ha.{{HOMEPAGE_VAR_DOMAIN}}:8123
+        href: http://homeassistant.{{HOMEPAGE_VAR_DOMAIN}}
         description: Home automation platform
         icon: home-assistant
-        ping: http://ha.{{HOMEPAGE_VAR_DOMAIN}}:8123
+        ping: http://homeassistant.{{HOMEPAGE_VAR_DOMAIN}}
     - CCTV:
         href: http://nvr.{{HOMEPAGE_VAR_DOMAIN}}
         description: Security cameras
