@@ -96,7 +96,6 @@
         description: Adversary emulation
         icon: caldera.png
         ping: https://caldera.{{HOMEPAGE_VAR_DOMAIN}}
-    
 
 - Home Automation:
     - Home Assistant:

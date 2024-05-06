@@ -5,8 +5,10 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - ./config:/app/config # Make sure your local config directory exists
-      - /var/run/docker.sock:/var/run/docker.sock # (optional) For docker integrations, see alternative methods
+      - ./config:/app/config
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      proxy:
     environment:
       PUID: $PUID
       PGID: $PGID
@@ -14,3 +16,24 @@ services:
       HOMEPAGE_VAR_UNIFI_USER: ${HOMEPAGE_VAR_UNIFI_USER}
       HOMEPAGE_VAR_UNIFI_PASS: ${HOMEPAGE_VAR_UNIFI_PASS}
       HOMEPAGE_VAR_PIHOLE_KEY: ${HOMEPAGE_VAR_PIHOLE_KEY}
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.homepage.entrypoints=http"
+      - "traefik.http.routers.homepage.rule=Host(`homepage.${HOMEPAGE_VAR_DOMAIN}`)"
+      - "traefik.http.routers.homepage.middlewares=default-whitelist@file"
+      - "traefik.http.middlewares.homepage-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.homepage.middlewares=homepage-https-redirect"
+      - "traefik.http.routers.homepage-secure.entrypoints=https"
+      - "traefik.http.routers.homepage-secure.rule=Host(`homepage.${HOMEPAGE_VAR_DOMAIN}`)"
+      - "traefik.http.routers.homepage-secure.tls=true"
+      - "traefik.http.routers.homepage-secure.service=homepage"
+      - "traefik.http.services.homepage.loadbalancer.server.port=3000"
+     # - "traefik.http.routers.homepage-secure.middlewares=default-whitelist@file" # uncomment if you want to use a Traefik whitelist to restrict access
+     # - "traefik.http.routers.homepage-secure.middlewares=authelia@docker" # uncomment if you want to use authelia
+      - "traefik.docker.network=proxy"
+    security_opt:
+      - no-new-privileges:true
+
+networks:
+  proxy:
+    external: true
