@@ -22,7 +22,7 @@ services:
       - "traefik.http.routers.homepage.rule=Host(`homepage.${HOMEPAGE_VAR_DOMAIN}`)"
       - "traefik.http.routers.homepage.middlewares=default-whitelist@file"
       - "traefik.http.middlewares.homepage-https-redirect.redirectscheme.scheme=https"
-      - "traefik.http.routers.homepage.middlewares=homepage-https-redirect"
+      - "traefik.http.routers.homepage.middlewares=traefik-https-redirect"
       - "traefik.http.routers.homepage-secure.entrypoints=https"
       - "traefik.http.routers.homepage-secure.rule=Host(`homepage.${HOMEPAGE_VAR_DOMAIN}`)"
       - "traefik.http.routers.homepage-secure.tls=true"
