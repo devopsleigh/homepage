@@ -1,7 +1,7 @@
 services:
   homepage:
     image: ghcr.io/gethomepage/homepage:latest
-    container_name: homepage
+    container_name: ${SERVICE_NAME}
 #    ports:
 #      - 3000:3000
     volumes:
