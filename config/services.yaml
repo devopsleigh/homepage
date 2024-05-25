@@ -123,7 +123,7 @@
         href: https://gitlab.{{HOMEPAGE_VAR_DOMAIN}}
         description: Version control and CI/CD
         icon: gitlab
-        siteMonitor: https://gitlab.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://gitlab.{{HOMEPAGE_VAR_DOMAIN}}/users/sign_in
     - SonarQube:
         href: https://sonarqube.{{HOMEPAGE_VAR_DOMAIN}}
         description: Static code analysis and quality scanning
