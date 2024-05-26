@@ -3,9 +3,12 @@
 # https://gethomepage.dev/latest/configs/bookmarks
 
 - HomeLab:
-    - My GitHub repos:
+    - My GitHub Repos:
         - abbr: GH
           href: https://github.com/devopsleigh?tab=repositories
+    - My GitHub Gists:
+        - abbr: GG
+          href: https://gist.github.com/devopsleigh
     - Cloudflare:
         - abbr: CF
           href: https://dash.cloudflare.com
