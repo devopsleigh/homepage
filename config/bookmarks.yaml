@@ -4,7 +4,7 @@
 
 - HomeLab:
     - My GitHub Repos:
-        - abbr: GH
+        - abbr: GR
           href: https://github.com/devopsleigh?tab=repositories
     - My GitHub Gists:
         - abbr: GG
@@ -15,6 +15,11 @@
     - Proxmox Helper Scripts:
        - abbr: PH
          href: https://helper-scripts.com/scripts
+
+- Utilities:
+    - Copilot:
+      - abbr: CP
+        href: https://copilot.microsoft.com
 
 - Entertainment:
     - YouTube:
