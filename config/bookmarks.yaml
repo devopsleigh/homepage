@@ -4,24 +4,16 @@
 
 - HomeLab:
     - My GitHub Repos:
-        - abbr: GR
-          href: https://github.com/devopsleigh?tab=repositories
+        - href: https://github.com/devopsleigh?tab=repositories
     - My GitHub Gists:
-        - abbr: GG
-          href: https://gist.github.com/devopsleigh
+        - href: https://gist.github.com/devopsleigh
     - Cloudflare:
-        - abbr: CF
-          href: https://dash.cloudflare.com
+        - href: https://dash.cloudflare.com
     - Proxmox Helper Scripts:
-       - abbr: PH
-         href: https://helper-scripts.com/scripts
+       - href: https://helper-scripts.com/scripts
 
-- Utilities:
+- Reference:
     - Copilot:
-      - abbr: CP
-        href: https://copilot.microsoft.com
-
-- Entertainment:
+      - href: https://copilot.microsoft.com
     - YouTube:
-        - abbr: YT
-          href: https://youtube.com/
+        - href: https://youtube.com/
