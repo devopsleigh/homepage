@@ -33,10 +33,10 @@
           url: http://pihole-02.{{HOMEPAGE_VAR_DOMAIN}}
           key: {{HOMEPAGE_VAR_PIHOLE_KEY}}
     - NetAlertX:
-        href: http://netalertx.{{HOMEPAGE_VAR_DOMAIN}}
+        href: https://netalertx.{{HOMEPAGE_VAR_DOMAIN}}
         description: Network monitoring tool for detecting rogue devices
         icon: pi-alert.png
-        siteMonitor: http://netalertx.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://netalertx.{{HOMEPAGE_VAR_DOMAIN}}
 
 - Hosting:
     - Proxmox:
