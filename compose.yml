@@ -2,6 +2,7 @@ services:
   homepage:
     image: ghcr.io/gethomepage/homepage:latest
     container_name: ${SERVICE_NAME}
+    restart: unless-stopped
     volumes:
       - ./config:/app/config
       - /var/run/docker.sock:/var/run/docker.sock:ro
