@@ -13,6 +13,8 @@ services:
       HOMEPAGE_VAR_UNIFI_USER: ${HOMEPAGE_VAR_UNIFI_USER}
       HOMEPAGE_VAR_UNIFI_PASS: ${HOMEPAGE_VAR_UNIFI_PASS}
       HOMEPAGE_VAR_PIHOLE_KEY: ${HOMEPAGE_VAR_PIHOLE_KEY}
+    dns:
+      - '${DNS_SERVER}'
     networks:
       proxy:
     labels:

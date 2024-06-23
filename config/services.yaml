@@ -50,15 +50,10 @@
 #          username: api_token_id
 #          password: api_token_secret
     - Synology NAS:
-        href: https://nas.{{HOMEPAGE_VAR_DOMAIN}}:5001
+        href: https://nas.{{HOMEPAGE_VAR_DOMAIN}}:5041
         description: Network-attached storage
         icon: synology-dsm
-        siteMonitor: https://nas.{{HOMEPAGE_VAR_DOMAIN}}:5001
-#        widget:
-#          type: diskstation
-#          url: https://nas.{{HOMEPAGE_VAR_DOMAIN}}:5001
-#          username: username
-#          password: password
+        siteMonitor: https://nas.{{HOMEPAGE_VAR_DOMAIN}}:5041
     - Portainer:
         href: https://portainer.{{HOMEPAGE_VAR_DOMAIN}}
         description: Container management GUI
@@ -117,6 +112,11 @@
         description: Flow-based automations
         icon: node-red
         siteMonitor: https://nodered.{{HOMEPAGE_VAR_DOMAIN}}
+    - Change Detection:
+        href: https://changedetection.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Detect changes in websites
+        icon: mdi-delta
+        siteMonitor: https://changedetection.{{HOMEPAGE_VAR_DOMAIN}}
 
 - Development:
     - GitLab:
