@@ -60,10 +60,10 @@
         icon: portainer
         siteMonitor: https://portainer.{{HOMEPAGE_VAR_DOMAIN}}
     - Traefik:
-        href: https://traefik.{{HOMEPAGE_VAR_DOMAIN}}
+        href: https://traefik.{{HOMEPAGE_VAR_DOMAIN}}/dashboard/
         description: TLS front end and reverse proxy
         icon: traefik
-        siteMonitor: https://traefik.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://traefik.{{HOMEPAGE_VAR_DOMAIN}}/dashboard/
     - Uptime Kuma:
         href: https://uptimekuma.{{HOMEPAGE_VAR_DOMAIN}}
         description: Service monitoring
