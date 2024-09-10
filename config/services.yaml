@@ -1,20 +1,22 @@
 ---
 # For configuration options and examples, please see:
 # https://gethomepage.dev/latest/configs/services
+# For icons, see:
+# https://github.com/walkxcode/dashboard-icons/tree/main/svg
 
 # Technical Services
 
-- Network:
+- Networking:
     - UniFi Controller:
         href: https://192.168.1.1
         description: UniFi network management
         icon: unifi
-        widget:
-          type: unifi
-          url: https://192.168.1.1
-          username: {{HOMEPAGE_VAR_UNIFI_USER}}
-          password: {{HOMEPAGE_VAR_UNIFI_PASS}}
-    - Pi-hole 01:
+        # widget:
+        #   type: unifi
+        #   url: https://192.168.1.1
+        #   username: {{HOMEPAGE_VAR_UNIFI_USER}}
+        #   password: {{HOMEPAGE_VAR_UNIFI_PASS}}
+    - Pi-hole 1:
         href: http://pihole-01.{{HOMEPAGE_VAR_DOMAIN}}:2052/admin
         description: Network-wide ad blocker and local DNS
         icon: pi-hole
@@ -23,7 +25,7 @@
           type: pihole
           url: http://pihole-01.{{HOMEPAGE_VAR_DOMAIN}}:2052
           key: {{HOMEPAGE_VAR_PIHOLE_KEY}}
-    - Pi-hole 02:
+    - Pi-hole 2:
         href: http://pihole-02.{{HOMEPAGE_VAR_DOMAIN}}/admin
         description: Network-wide ad blocker and local DNS
         icon: pi-hole
@@ -32,133 +34,87 @@
           type: pihole
           url: http://pihole-02.{{HOMEPAGE_VAR_DOMAIN}}
           key: {{HOMEPAGE_VAR_PIHOLE_KEY}}
-    - NetAlertX:
-        href: https://netalertx.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Network monitoring tool for detecting rogue devices
-        icon: pi-alert.png
-        siteMonitor: https://netalertx.{{HOMEPAGE_VAR_DOMAIN}}
 
 - Hosting:
-    - Proxmox:
+    - Proxmox Cluster:
         href: https://pve-01.{{HOMEPAGE_VAR_DOMAIN}}:8006
         description: Hypervisor
         icon: proxmox
         siteMonitor: https://pve-01.{{HOMEPAGE_VAR_DOMAIN}}:8006
-#        widget:
-#          type: proxmox
-#          url: https://pve-01.{{HOMEPAGE_VAR_DOMAIN}}:8006
-#          username: api_token_id
-#          password: api_token_secret
-    - Synology NAS:
-        href: https://nas.{{HOMEPAGE_VAR_DOMAIN}}:5041
+        widget:
+            type: proxmox
+            url: https://pve-01.{{HOMEPAGE_VAR_DOMAIN}}:8006
+            username: {{HOMEPAGE_VAR_PROXMOX_API_USER}}
+            password: {{HOMEPAGE_VAR_PROXMOX_API_KEY}}
+            # node: pve-01
+    # - Proxmox 2:
+    #     href: https://pve-02.{{HOMEPAGE_VAR_DOMAIN}}:8006
+    #     description: Hypervisor
+    #     icon: proxmox
+    #     siteMonitor: https://pve-02.{{HOMEPAGE_VAR_DOMAIN}}:8006
+    #     widget:
+    #         type: proxmox
+    #         url: https://pve-02.{{HOMEPAGE_VAR_DOMAIN}}:8006
+    #         username: {{HOMEPAGE_VAR_PROXMOX_API_USER}}
+    #         password: {{HOMEPAGE_VAR_PROXMOX_API_KEY}}
+    #         node: pve-02
+    - Proxmox Lab:
+        href: https://pve-03.{{HOMEPAGE_VAR_DOMAIN}}:8006
+        description: Hypervisor for lab services
+        icon: proxmox
+        siteMonitor: https://pve-03.{{HOMEPAGE_VAR_DOMAIN}}:8006
+        widget:
+            type: proxmox
+            url: https://pve-03.{{HOMEPAGE_VAR_DOMAIN}}:8006
+            username: {{HOMEPAGE_VAR_PROXMOX_API_USER}}
+            password: {{HOMEPAGE_VAR_PROXMOX_API_KEY}}
+            node: pve-03
+    - Proxmox Backup Server:
+        href: https://pbs.{{HOMEPAGE_VAR_DOMAIN}}:8007
+        description: Backup manager for Proxmox
+        icon: proxmox-light.png
+        siteMonitor: https://pbs.{{HOMEPAGE_VAR_DOMAIN}}:8007
+    - Synology DSM:
+        href: https://dsm.{{HOMEPAGE_VAR_DOMAIN}}
         description: Network-attached storage
         icon: synology-dsm
-        siteMonitor: https://nas.{{HOMEPAGE_VAR_DOMAIN}}:5041
-    - Portainer:
-        href: https://portainer.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Container management GUI
-        icon: portainer
-        siteMonitor: https://portainer.{{HOMEPAGE_VAR_DOMAIN}}
-    - Traefik:
-        href: https://traefik.{{HOMEPAGE_VAR_DOMAIN}}/dashboard/
-        description: TLS front end and reverse proxy
-        icon: traefik
-        siteMonitor: https://traefik.{{HOMEPAGE_VAR_DOMAIN}}/dashboard/
-    - Uptime Kuma:
-        href: https://uptimekuma.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Service monitoring
-        icon: uptime-kuma
-        siteMonitor: https://uptimekuma.{{HOMEPAGE_VAR_DOMAIN}}
-    - Kasm:
-        href: https://kasm.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Desktop as a Service
-        icon: kasm
-        siteMonitor: https://kasm.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://dsm.{{HOMEPAGE_VAR_DOMAIN}}
+    # - Synology NAS:
+    #     href: https://nas.{{HOMEPAGE_VAR_DOMAIN}}:5041
+    #     description: Network-attached storage
+    #     icon: synology-dsm
+    #     siteMonitor: https://nas.{{HOMEPAGE_VAR_DOMAIN}}:5041
+    - Offsite NAS:
+          href: {{HOMEPAGE_VAR_OFFSITE_NAS}}
+          description: Off-site NAS for critical backup
+          icon: synology-dsm
+          siteMonitor: {{HOMEPAGE_VAR_OFFSITE_NAS}}
 
-- Security:
-    - Keycloak:
-        href: https://keycloak.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Single sign-on authentication
-        icon: keycloak
-        siteMonitor: https://keycloak.{{HOMEPAGE_VAR_DOMAIN}}
-    - Wazuh:
-        href: https://wazuh.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Security monitoring and intrusion detection
-        icon: https://avatars.githubusercontent.com/u/13752566
-        siteMonitor: https://wazuh.{{HOMEPAGE_VAR_DOMAIN}}
-    - The Hive:
-        href: https://hive.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Incident response and case management
-        icon: https://www.strangebee.com/images/logos/bee-white.svg
-        siteMonitor: https://hive.{{HOMEPAGE_VAR_DOMAIN}}
-    - Caldera:
-        href: https://caldera.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Adversary emulation
-        icon: caldera.png
-        siteMonitor: https://caldera.{{HOMEPAGE_VAR_DOMAIN}}
+# - Security and Monitoring:
 
-- Home Automation:
-    - Home Assistant:
-        href: https://homeassistant.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Home automation platform
-        icon: home-assistant
-        siteMonitor: https://homeassistant.{{HOMEPAGE_VAR_DOMAIN}}
-#        widget:
-#          type: homeassistant
-#          url: http://homeassistant.host.or.ip:port
-#          key: access_token
-    - NodeRed:
-        href: https://nodered.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Flow-based automations
-        icon: node-red
-        siteMonitor: https://nodered.{{HOMEPAGE_VAR_DOMAIN}}
-    - Change Detection:
-        href: https://changedetection.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Detect changes in websites
-        icon: mdi-delta
-        siteMonitor: https://changedetection.{{HOMEPAGE_VAR_DOMAIN}}
-
-- Development:
-    - GitLab:
-        href: https://gitlab.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Version control and CI/CD
-        icon: gitlab
-        siteMonitor: http://gitlab.{{HOMEPAGE_VAR_DOMAIN}}/users/sign_in
-    - SonarQube:
-        href: https://sonarqube.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Static code analysis and quality scanning
-        icon: si-sonarqube
-        siteMonitor: https://sonarqube.{{HOMEPAGE_VAR_DOMAIN}}
+# - Development and Automation:
 
 # User Services
 
-- Utilities:
-    - Paperless:
-        href: https://paperless.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Document management
-        icon: paperless-ngx
-        siteMonitor: https://paperless.{{HOMEPAGE_VAR_DOMAIN}}
-    - Mealie:
-        href: https://mealie.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Recipe management and meal planning
-        icon: mealie
-        siteMonitor: https://mealie.{{HOMEPAGE_VAR_DOMAIN}}
-    - Kiwix:
-        href: https://kiwix.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Offline Wiki reader
-        icon: kiwix
-        siteMonitor: https://kiwix.{{HOMEPAGE_VAR_DOMAIN}}
+# - Utilities:
+
 - Entertainment:
     - Plex:
         href: http://plex.{{HOMEPAGE_VAR_DOMAIN}}:32400/web
-        description: Home media streaming service
+        description: Local media streaming service
         icon: plex
         siteMonitor: http://plex.{{HOMEPAGE_VAR_DOMAIN}}:32400
-    - Makemkv:
-        href: http://makemkv.{{HOMEPAGE_VAR_DOMAIN}}
-        description: DVD and Blu-Ray backup and conversion
-        icon: makemkv.png
-        siteMonitor: http://makemkv.{{HOMEPAGE_VAR_DOMAIN}}
+    - Jellyfin:
+        href: https://jellyfin.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Local media streaming service (works without internet)
+        icon: jellyfin
+        siteMonitor: https://jellyfin.{{HOMEPAGE_VAR_DOMAIN}}
+    - MeTube:
+        href: https://metube.elnet.xyz
+        description: YouTube video downloader
+        icon: metube
+        siteMonitor: https://metube.elnet.xyz
+
 - Home:
     - Home Assistant:
         href: https://homeassistant.{{HOMEPAGE_VAR_DOMAIN}}
@@ -166,7 +122,7 @@
         icon: home-assistant
         siteMonitor: https://homeassistant.{{HOMEPAGE_VAR_DOMAIN}}
     - CCTV:
-        href: http://nvr.{{HOMEPAGE_VAR_DOMAIN}}
+        href: https://nvr.{{HOMEPAGE_VAR_DOMAIN}}
         description: Security cameras
         icon: mdi-cctv
-        siteMonitor: http://nvr.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://nvr.{{HOMEPAGE_VAR_DOMAIN}}

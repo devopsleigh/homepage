@@ -5,15 +5,27 @@
 - HomeLab:
     - My GitHub Repos:
         - href: https://github.com/devopsleigh?tab=repositories
+          icon: github-light
+    - My GitHub HomeLab project:
+        - href: https://github.com/users/devopsleigh/projects/1/views/1
+          icon: github-light
     - My GitHub Gists:
         - href: https://gist.github.com/devopsleigh
+          icon: github-light
     - Cloudflare:
         - href: https://dash.cloudflare.com
+          icon: cloudflare
     - Proxmox Helper Scripts:
        - href: https://helper-scripts.com/scripts
+         icon: proxmox
+    # - Offsite NAS:
+    #     - href: https://{{HOMEPAGE_VAR_OFFSITE_NAS}}
+    #       icon: synology-dsm
 
 - Reference:
     - Copilot:
       - href: https://copilot.microsoft.com
+        icon: https://copilot.microsoft.com/rp/vE266_E90czuUc-Fs55Qoq9hIBc.svg
     - YouTube:
         - href: https://youtube.com/
+          icon: youtube

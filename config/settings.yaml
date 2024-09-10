@@ -2,39 +2,78 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/latest/configs/settings
 
-providers:
-  openweathermap: openweathermapapikey
-  weatherapi: weatherapiapikey
+# background:
+  # image: /images/background.jpg
+  # blur: sm # sm, "", md, xl... see https://tailwindcss.com/docs/backdrop-blur
+  # saturate: 50 # 0, 50, 100... see https://tailwindcss.com/docs/backdrop-saturate
+  # brightness: 50 # 0, 50, 75... see https://tailwindcss.com/docs/backdrop-brightness
+  # opacity: 50 # 0-100
+
+# providers:
+#   openweathermap: openweathermapapikey
+#   weatherapi: weatherapiapikey
 
 quicklaunch:
   searchDescriptions: true
   hideInternetSearch: true
 
-showStats: true
+disableCollapse: true
+target: _blank # Possible options include _blank, _self, and _top
+# showStats: true
 statusStyle: "dot"
 theme: dark
 color: slate
 
 layout:
+
 # User Services
   Home:
     tab: User Services
+    icon: mdi-home
   Business:
     tab: User Services
   Entertainment:
     tab: User Services
+    icon: mdi-play-outline
   Utilities:
     tab: User Services
+    icon: mdi-link
+  
 # Technical Services
-  Network:
+  Networking:
      tab: Technical Services
+     icon: mdi-lan
+    #  style: row
+    #  columns: 3
   Hosting:
      tab: Technical Services
+     icon: mdi-server-network
+    #  style: row
+    #  columns: 4
   Security:
      tab: Technical Services
-  Development:
+     icon: mdi-security
+    #  style: row
+    #  columns: 4
+  Monitoring:
      tab: Technical Services
-  Home Automation:
+     icon: mdi-list-box-outline
+    #  style: row
+    #  columns: 4
+  Dev & Automation:
      tab: Technical Services
+     icon: mdi-source-branch
+    #  style: row
+    #  columns: 4
   HomeLab:
      tab: Technical Services
+     icon: mdi-link
+    #  style: row
+    #  columns: 4
+
+# Cybersecurity Lab
+
+# General
+
+  Reference:
+    icon: mdi-link
