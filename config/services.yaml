@@ -46,44 +46,38 @@
             url: https://pve-01.{{HOMEPAGE_VAR_DOMAIN}}:8006
             username: {{HOMEPAGE_VAR_PROXMOX_API_USER}}
             password: {{HOMEPAGE_VAR_PROXMOX_API_KEY}}
-            # node: pve-01
     # - Proxmox 2:
     #     href: https://pve-02.{{HOMEPAGE_VAR_DOMAIN}}:8006
     #     description: Hypervisor
     #     icon: proxmox
     #     siteMonitor: https://pve-02.{{HOMEPAGE_VAR_DOMAIN}}:8006
-    #     widget:
-    #         type: proxmox
-    #         url: https://pve-02.{{HOMEPAGE_VAR_DOMAIN}}:8006
-    #         username: {{HOMEPAGE_VAR_PROXMOX_API_USER}}
-    #         password: {{HOMEPAGE_VAR_PROXMOX_API_KEY}}
-    #         node: pve-02
-    - Proxmox Lab:
-        href: https://pve-03.{{HOMEPAGE_VAR_DOMAIN}}:8006
-        description: Hypervisor for lab services
-        icon: proxmox
-        siteMonitor: https://pve-03.{{HOMEPAGE_VAR_DOMAIN}}:8006
-        widget:
-            type: proxmox
-            url: https://pve-03.{{HOMEPAGE_VAR_DOMAIN}}:8006
-            username: {{HOMEPAGE_VAR_PROXMOX_API_USER}}
-            password: {{HOMEPAGE_VAR_PROXMOX_API_KEY}}
-            node: pve-03
+    #     # widget:
+    #     #     type: proxmox
+    #     #     url: https://pve-02.{{HOMEPAGE_VAR_DOMAIN}}:8006
+    #     #     username: {{HOMEPAGE_VAR_PROXMOX_API_USER}}
+    #     #     password: {{HOMEPAGE_VAR_PROXMOX_API_KEY}}
+    #         # node: pve-02
+    # - Proxmox 3:
+    #     href: https://pve-03.{{HOMEPAGE_VAR_DOMAIN}}:8006
+    #     description: Hypervisor
+    #     icon: proxmox
+    #     siteMonitor: https://pve-03.{{HOMEPAGE_VAR_DOMAIN}}:8006
+    #     # widget:
+    #     #     type: proxmox
+    #     #     url: https://pve-03.{{HOMEPAGE_VAR_DOMAIN}}:8006
+    #     #     username: {{HOMEPAGE_VAR_PROXMOX_API_USER}}
+    #     #     password: {{HOMEPAGE_VAR_PROXMOX_API_KEY}}
+    #         # node: pve-03
     - Proxmox Backup Server:
         href: https://pbs.{{HOMEPAGE_VAR_DOMAIN}}:8007
         description: Backup manager for Proxmox
         icon: proxmox-light.png
         siteMonitor: https://pbs.{{HOMEPAGE_VAR_DOMAIN}}:8007
     - Synology DSM:
-        href: https://dsm.{{HOMEPAGE_VAR_DOMAIN}}
+        href: https://nas.{{HOMEPAGE_VAR_DOMAIN}}
         description: Network-attached storage
         icon: synology-dsm
-        siteMonitor: https://dsm.{{HOMEPAGE_VAR_DOMAIN}}
-    # - Synology NAS:
-    #     href: https://nas.{{HOMEPAGE_VAR_DOMAIN}}:5041
-    #     description: Network-attached storage
-    #     icon: synology-dsm
-    #     siteMonitor: https://nas.{{HOMEPAGE_VAR_DOMAIN}}:5041
+        siteMonitor: https://nas.{{HOMEPAGE_VAR_DOMAIN}}
     - Offsite NAS:
           href: {{HOMEPAGE_VAR_OFFSITE_NAS}}
           description: Off-site NAS for critical backup
